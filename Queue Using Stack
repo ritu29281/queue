@@ -1,0 +1,44 @@
+  stack<int>s1,s2;
+    MyQueue() {
+        
+    }
+    
+    void push(int x) {
+      s1.push(x);  
+    }
+    
+    int pop() {
+        int popelem=-1;
+        if(!s2.empty()){
+            popelem=s2.top();
+        }
+        else{
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+            popelem=s2.top();
+        }
+        s2.pop();
+        return popelem;
+    }
+    
+    int peek() {
+        int frontelem=-1;
+        if(!s2.empty()){
+            frontelem=s2.top();
+        }
+        else{
+            while(!s1.empty()){
+                s2.push(s1.top());
+                s1.pop();
+            }
+            frontelem=s2.top();
+        }
+        return frontelem;
+        
+    }
+    
+    bool empty() {
+        return s1.empty() && s2.empty();
+    }
