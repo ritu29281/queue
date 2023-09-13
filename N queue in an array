@@ -1,11 +1,11 @@
 class KQueue{
-  int n,k,freespot;
-  int arr*,*front,*rear,*next;
-KQueue(int n,int k){
-   arr= new int[n];
-   next=new int[n];
-   front=new int[k];
-   rear=new int[k];
+    int n,k,freespot;
+    int arr*,*front,*rear,*next;
+  KQueue(int n,int k){
+    arr= new int[n];
+    next=new int[n];
+    front=new int[k];
+    rear=new int[k];
      for(int i=0;i<k;i++){
        front[i]=rear[i]=-1;
    }
